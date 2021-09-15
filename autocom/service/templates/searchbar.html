@@ -1,0 +1,12 @@
+{{ error }}
+
+{% if model %}
+    <center><h1>Найдены следующие результаты:</h1></center>
+    <br>
+{% for i in model %}
+<a href="/category_list/{{i.slug}}">{{i.title}}</a>
+{% endfor %}
+    {% else %}
+<h1>К сожалению, по вашему запросу ничего на найдено</h1>
+{% endif%}
+

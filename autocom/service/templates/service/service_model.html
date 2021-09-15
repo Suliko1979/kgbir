@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load banner %}
+
+    <meta name="description" content="{% block description %}{{ service_model_view.description }} {% endblock description %}">
+    <meta name="keywords" content="{% block keywords %}{{ service_model_view.keywords}} {% endblock keywords %}">
+
+    <title>{% block title %}{{ service_model_view.title}}{% endblock title %}</title>
+    <link rel="stylesheet" href="css/style.css">
+
+<div class="container">
+{% block header %}
+{% banner_tag service_model_view %}
+{% endblock header %}
+
+{% block content %}
+
+{{ service_model_view.text}}
+
+
+
+{% endblock content %}
+
+    </div>
